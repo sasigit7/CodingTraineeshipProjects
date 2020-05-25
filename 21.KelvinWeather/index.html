@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Weather</title>
+</head>
+
+<body>
+    <h1>Kelvin Weather</h1>
+    <hr>
+    <p>Open Console to see the Output!</p>
+    <script>
+        // A constant variable kelvin is declared and assigned a value.
+        // const kelvin = 293;
+        const kelvin = 0;
+
+        // Celsius is 273 degrees less than kelvin and this value is stored in celsius variable.
+        const celsius = kelvin - 273;
+
+        /* Fahrenheit = Celsius * (9/5) + 32 and to round down the temperature to whole number from decimal number, use
+        Math.floor()method. All this was assigned to a fahrenheit variable. */
+        let fahrenheit = Math.floor(celsius * (9 / 5) + 32);
+
+        // Log the output to the console using console.log() method.
+        console.log(`${kelvin} Kelvin is about ${fahrenheit} degrees Fahrenheit.`);
+
+        /* Newton = Celsius * (33/100) and to round down the temperature to whole number from decimal number, use
+        Math.floor()method. All this was assigned to a newton variable. */
+        let newton = Math.floor(celsius * (33 / 100));
+
+        // Log the output to the console using console.log() method.
+        console.log(`${kelvin} Kelvin is about ${newton} degrees Newton.`);
+    </script>
+</body>
+
+</html>
