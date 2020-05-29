@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    margin: 30px 130px;
+}
+
+h2 {
+    margin: 20px 0px;
+}
+
+.first-container,
+.second-container,
+.third-container {
+    padding: 2%;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: left;
+}
+
+/* Colors */
+.blue-box,
+.pink-box,
+.green-box,
+.beige-box {
+    /* border: 1px solid black; */
+    display: inline-block;
+    width: 350px;
+    height: 100px;
+    margin: 20px 1px;
+    text-align: center;
+}
+
+span {
+    display: block;
+    margin-top: 20px;
+}
+
+.blue-box {
+    background-color: #2d5dcc;
+    color: white;
+}
+
+.pink-box {
+    background-color: #d957d9;
+}
+
+.green-box {
+    background-color: #4fe0b0;
+}
+
+.beige-box {
+    background-color: #efd9ca;
+}
+
+/* Fonts */
+.sourceFont,
+.nunitoFont,
+.poppinsFont {
+    /* border: 1px solid black; */
+    display: inline-block;
+    width: 450px;
+    height: 200px;
+    /* margin: 20px; */
+    text-align: left;
+}
+
+.nunitoFont {
+    float: right;
+}
+
+.sourceFont,
+.nunitoFont,
+.poppinsFont p {
+    line-height: 2.5;
+}
+
+.source,
+.nunito,
+.poppins {
+    font-weight: normal;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.source,
+.sourcePara {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.nunito,
+.nunitoPara {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.poppins,
+.poppinsPara {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Text Styles */
+ul {
+    margin: 25px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+ul li {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+#para {
+    font-size: 17px;
+}
