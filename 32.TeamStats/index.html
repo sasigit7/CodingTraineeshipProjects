@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Team Stats</title>
+</head>
+
+<body>
+    <h1>Team Stats</h1>
+    <hr>
+    <p>Open the Console to see the Output.</p>
+    <!-- JavaScript -->
+    <script>
+        const team = {
+            _players: [{
+                    firstName: 'Lionell',
+                    lastName: 'Messi',
+                    age: 26
+                },
+                {
+                    firstName: 'Wayne',
+                    lastName: 'Rooney',
+                    age: 31
+                },
+                {
+                    firstName: 'Christiano',
+                    lastName: 'Ronaldo',
+                    age: 28
+                }
+            ],
+            _games: [{
+                    opponent: 'Real Madrid',
+                    teamPoints: 42,
+                    opponentPoints: 27
+                },
+                {
+                    opponent: 'Barcelona',
+                    teamPoints: 32,
+                    opponentPoints: 17
+                },
+                {
+                    opponent: 'Man Utd',
+                    teamPoints: 52,
+                    opponentPoints: 37
+                }
+            ],
+            // Getter Methods:
+            get players() {
+                return this._players;
+            },
+            get games() {
+                return this._games;
+            },
+            // Add new player to the team
+            addPlayer(firstName, lastName, age) {
+                let player = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    age: age
+                };
+                this.players.push(player);
+            },
+            // Add new game to the team
+            addGame(opponentName, teamPoints, opponentPoints) {
+                let game = {
+                    opponentName: opponentName,
+                    teamPoints: teamPoints,
+                    opponentPoints: opponentPoints
+                };
+                this.games.push(game);
+            }
+        };
+        team.addPlayer('Steph', 'Curry', 28);
+        team.addPlayer('Lisa', 'Leslie', 44);
+        team.addPlayer('Bugs', 'Bunny', 76);
+        console.log(team.players);
+        team.addGame('Arsenal', 35, 43);
+        team.addGame('Chelsea', 45, 32);
+        team.addGame('Man City', 34, 28);
+        console.log(team.games);
+    </script>
+</body>
+
+</html>
