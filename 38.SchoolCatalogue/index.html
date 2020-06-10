@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Build A School Catalogue Using JavaScript Classes</title>
+</head>
+
+<body>
+    <h1>Build A School Catalogue Using JavaScript Classes</h1>
+    <hr>
+    <p>Open the Console to see the Output.</p>
+    <script>
+        // Parent Class or Super Class: School
+        class School {
+            constructor(name, level, numberOfStudents) {
+                this._name = name;
+                this._level = level;
+                this._numberOfStudents = numberOfStudents;
+            }
+
+            get name() {
+                return this._name;
+            }
+
+            get level() {
+                return this._level;
+            }
+
+            get numberOfStudents() {
+                return this._numberOfStudents;
+            }
+
+            set numberOfStudents(value) {
+                if (value.isNaN()) {
+                    console.log('Invalid input: numberOfStudents must be set to a Number.');
+                } else {
+                    this._numberOfStudents = value;
+                }
+            }
+
+            quickFacts() {
+                console.log(
+                    `${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`
+                );
+            }
+
+            static pickSubstituteTeacher(substituteTeachers) {
+                const subResult = Math.floor(Math.random() * substituteTeachers.length);
+                return substituteTeachers[subResult];
+            }
+        }
+
+
+        // Child Class or Sub Class: Primary
+        class PrimarySchool extends School {
+            constructor(name, numberOfStudents, pickupPolicy) {
+                super(name, 'primary', numberOfStudents);
+                this._pickupPolicy = pickupPolicy;
+            }
+
+            get pickupPolicy() {
+                return this._pickupPolicy;
+            }
+        }
+
+        // Create PrimarySchool Instance
+        const lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514,
+            'Students must be picked up by a parent, guardian, or a family member over the age of 13. ');
+
+        // Invoke
+        lorraineHansbury.quickFacts();
+
+        const sub = School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith',
+            'James Harden',
+            'Jason Terry', 'Manu Ginobli'
+        ]);
+
+
+        // Child Class or Sub Class: Middle
+        class Middle extends School {
+            // Nothing here
+        }
+
+        // Child Class or Sub Class: High
+        class HighSchool extends School {
+            constructor(name, numberOfStudents, sportsTeams) {
+                super(name, 'high', numberOfStudents);
+                this._sportsTeams = sportsTeams;
+            }
+
+            get sportsTeams() {
+                return this._sportsTeams;
+            }
+        }
+
+        // Create HighSchool Instance
+        const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball',
+            'Track and Field'
+        ]);
+
+        // Log the value to the console
+        console.log(alSmith.sportsTeams);
+    </script>
+</body>
+
+</html>
