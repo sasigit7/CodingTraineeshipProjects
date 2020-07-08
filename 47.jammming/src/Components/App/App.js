@@ -46,6 +46,28 @@ class App extends React.Component {
           album: 'Ben Folds Live',
           id: 6
         }
+      ],
+      playlistName: 'My Playlist',
+      playlistTracks: [
+        {
+          name: 'playlistName1', 
+          artist: 'playlistArtist1', 
+          album: 'playlistAlbum1', 
+          id: 7
+        }, 
+        {
+          name: 'playlistName2',
+          artist: 'playlistArtist2',
+          album: 'playlistAlbum2',
+          id: 8
+        },
+        {
+        name: 'playlistName3',
+        artist: 'playlistArtist3',
+        album: 'playlistAlbum3',
+        id: 9
+        }
+
       ]
     }
   }
@@ -61,7 +83,7 @@ class App extends React.Component {
         {/* Add a SearchResults component */}
           <SearchResults searchResults={this.state.searchResults} /> 
         {/* Add a Playlist component */} 
-          <Playlist />
+          <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
         </div>  
         </div> 
       </div>
