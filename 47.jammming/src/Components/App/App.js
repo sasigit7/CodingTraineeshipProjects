@@ -10,65 +10,9 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      searchResults: [
-        {
-         name: 'Tiny Dancer',
-         artist: 'Elton John',
-         album: 'Madman Across The Water',
-         id: 1
-        },
-        {
-          name: 'Tiny Dancer',
-          artist: 'Elton John',
-          album: 'Madman Across The Water',
-          id: 2
-        },
-        {
-          name: 'Tiny Dancer',
-          artist: 'Tim McGraw',
-          album: 'Love Story',
-          id: 3
-        },
-        {
-          name: 'Tiny Dancer',
-          artist: 'Rockabye Baby!',
-          album: 'Lullaby Renditions of Elton John',
-          id: 4
-        },
-        {
-          name: 'Tiny Dancer',
-          artist: 'The White Raven',
-          album: 'Tiny Dancer',
-          id: 5
-        },
-        {
-          name: 'Tiny Dancer - Live Album Version',
-          artist: 'Ben Folds',
-          album: 'Ben Folds Live',
-          id: 6
-        }
-      ],
+      searchResults: [],
       playlistName: 'My Playlist',
-      playlistTracks: [
-        {
-          name: 'playlistName1', 
-          artist: 'playlistArtist1', 
-          album: 'playlistAlbum1', 
-          id: 7
-        }, 
-        {
-          name: 'playlistName2',
-          artist: 'playlistArtist2',
-          album: 'playlistAlbum2',
-          id: 8
-        },
-        {
-        name: 'playlistName3',
-        artist: 'playlistArtist3',
-        album: 'playlistAlbum3',
-        id: 9
-        }
-      ]
+      playlistTracks: []
    };
       this.addTrack = this.addTrack.bind(this);
       this.removeTrack = this.removeTrack.bind(this);
@@ -109,7 +53,12 @@ class App extends React.Component {
   savePlaylist() {
     //alert('This method is correctly linked to the button');
     const trackURIs = this.state.playlistTracks.map(track => track.uri);
-
+    Spotify.savePlayList(this.state.playlistName, trackURIs).then(() => {
+      this.setState({
+        playlistName: 'New Playlist',
+        playlistTracks: []
+      })
+    })
   }
 
 // Hook up Search Bar to Spotify Search
