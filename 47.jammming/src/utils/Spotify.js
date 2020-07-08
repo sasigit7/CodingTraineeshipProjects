@@ -1,5 +1,6 @@
 const clientID = 'YOUR_SPOTIFY_API_KEY';
-const redirectURI = 'http://localhost:3000/';
+//const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'http://ReactProject-Jammming.surge.sh'
 
 let accessToken;
 const Spotify = {
