@@ -22,7 +22,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.2.2",
-    "sqlite3": "^3.1.9",
+    "sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master",
     "supertest": "^3.0.0",
     "whatwg-fetch": "^2.0.3"
   },
