@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Whale Talk</title>
+</head>
+
+<body>
+    <h1>Whale Talk</h1>
+    <hr>
+    <p>Open the Console to see the Output.</p>
+    <!-- JavaScript -->
+    <script>
+        // This phrase will be translated into Whale's language
+        let input = 'turpentine and turtles';
+        // Whales only speak in vowels
+        const vowels = ['a', 'e', 'i', 'o', 'u'];
+        // Create a variable to store the vowels from the input string
+        const resultArray = [];
+        // Create a loop to iterate each letter of the input string.
+        for (let i = 0; i < input.length; i++) {
+            // console.log('i is ' + i);
+            for (let j = 0; j < vowels.length; j++) {
+                // console.log('j is ' + j);
+                if (input[i] === vowels[j]) {
+                    if (input[i] === 'e') {
+                        resultArray.push('ee');
+                    } else if (input[i] === 'u') {
+                        resultArray.push('uu');
+                    } else {
+                        resultArray.push(input[i]);
+                    }
+                }
+            }
+        }
+        console.log(resultArray.join('').toUpperCase());
+    </script>
+</body>
+
+</html>
