@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Race Day</title>
+</head>
+
+<body>
+    <h1>Race Day</h1>
+    <hr>
+    <p>Open the Console to see the Output.</p>
+    <!-- JavaScript -->
+    <script>
+        // Generate a random race number between 0 and 999
+        let raceNumber = Math.floor(Math.random() * 1000);
+        // Create a variable that indicates whether a runner registered early or not and assign a boolean value (true or false)
+        let registeredEarly = true;
+        // Create a variable for the runner's age and assign a number value
+        let runnerAge = 19;
+        // Create a control flow statement using registeredEarly and runnerAge variables
+        if (runnerAge > 18 && registeredEarly) {
+            raceNumber += 1000;
+        }
+        // Create another control flow statement using runnerAge and registration time to determine race time
+        if (runnerAge > 18 && registeredEarly) {
+            console.log(`The runner with ${raceNumber} will race at 9.30am.`);
+        } else if (runnerAge > 18 && !registeredEarly) {
+            console.log(`The runner with ${raceNumber} will race at 11.00am.`);
+        } else if (runnerAge < 18) {
+            console.log(`The runner with ${raceNumber} will race at 12.30pm.`);
+        } else {
+            console.log('The runner has to see the registration desk.');
+        }
+    </script>
+</body>
+
+</html>
