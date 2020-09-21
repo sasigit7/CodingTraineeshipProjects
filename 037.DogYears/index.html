@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Dog Years</title>
+</head>
+
+<body>
+    <h1>Dog Years</h1>
+    <hr>
+    <p>Open the Console to see the Output.</p>
+
+    <!-- JavaScript -->
+    <script>
+        // Declare an age variable and assign a value to it.
+        const myAge = 36;
+
+        // Declare an early years variable and assign a value to it.
+        let earlyYears = 2;
+
+        // Re-assign earlyYears variable with a new value using multiplication assignment operator.
+        // The first two years of a dog’s life count as 10.5 dog years each.
+        earlyYears *= 10.5;
+        // Check the output
+        console.log(earlyYears); // 21
+
+        // Declare a later years variable and assign a value. In that, two years will be subtracted from the myAge variable.
+        let laterYears = myAge - 2;
+
+        // Re-assign laterYears variable with a new value using multiplication assignment operator.
+        // Each year following equates to 4 dog years.
+        laterYears *= 4;
+        // Check the output
+        console.log(laterYears); // 140
+
+        // Add earlyYears and laterYears together in another variable.
+        let myAgeInDogYears = earlyYears + laterYears;
+
+        // Use a string method on the my name variable
+        let myName = 'Shashi'.toLowerCase();
+
+        // Log the statement that displays my name and age in dog years.
+        console.log(
+            `My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`
+        );
+    </script>
+</body>
+
+</html>
