@@ -1,0 +1,406 @@
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Structure Styles
+  4. Module Styles
+  5. Component Styles
+  6. Page Styles
+======================================== */
+
+/* 1. Global Styles
+======================================== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #333333;
+}
+
+.clearfix::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+/* 2. Typography Styles
+======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 15px;
+    transition: font-size 0.25s ease;
+}
+
+h1 {
+    font-size: calc(100px / 1.5);
+    line-height: 0.85;
+}
+
+h2 {
+    font-size: calc(65px / 1.5);
+    margin-top: 10px;
+    line-height: 0.85;
+}
+
+@media(min-width: 720px) {
+    h1 {
+        font-size: calc(65px / 1.25);
+    }
+
+    h2 {
+        font-size: calc(65px / 1.25);
+    }
+}
+
+@media(min-width: 1024px) {
+    h1 {
+        font-size: 100px;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+}
+
+p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 15px;
+}
+
+a {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 23px;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* 3. Structure Styles
+======================================== */
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 15px;
+}
+
+.container:before,
+.container:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* 4. Modules Styles
+======================================== */
+
+/* Site Navigation */
+.site-navigation {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 30px 1em;
+}
+
+.site-header-left {
+    display: inline-block;
+}
+
+.site-header-left li {
+    line-height: 0;
+}
+
+.site-header-right {
+    display: inline-block;
+    float: right;
+}
+
+.site-header-right li,
+.footer-right li {
+    display: inline;
+}
+
+.site-header-right li a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Site Footer */
+.footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+}
+
+.footer-navigation {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+/* 5. Component Styles
+======================================== */
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: normal;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.5s ease;
+}
+
+.button:hover {
+    opacity: 0.75;
+}
+
+.button-primary {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    background-color: transparent;
+    float: left;
+}
+
+input,
+textarea {
+    margin-bottom: 15px;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+    transition: border-color 0.5s ease;
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    display: block;
+}
+
+textarea {
+    width: 100%;
+}
+
+/* 6. Page Styles
+======================================== */
+.photo-hero {
+    background-color: #76BCFA;
+    min-height: 700px;
+}
+
+.photo-hero-text {
+    padding: 0 20px;
+}
+
+.photo-hero h1 {
+    color: #FFFFFF;
+    margin: 1em 0 40px;
+    ;
+}
+
+.photo-hero h1 span {
+    color: #E09D27;
+}
+
+.photo-hero p {
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.photo-grid {
+    margin-top: -80px;
+}
+
+.image-box {
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px);
+    margin: 20px;
+    max-height: 450px;
+    overflow: hidden;
+    float: left;
+    display: inline-block;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+}
+
+.photo-blockquote {
+    background-color: #999999;
+    margin-top: -80px;
+    padding-bottom: 80px;
+}
+
+blockquote {
+    background-color: #E0977C;
+}
+
+blockquote p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+blockquote:before {
+    content: '  ';
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    text-align: center;
+    font-size: 150px;
+    color: #FFFFFF;
+    line-height: 30px;
+    padding-top: 40px;
+}
+
+blockquote footer {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #658AF5;
+}
+
+.photo-about,
+.photo-contact {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.photo-about h2 {
+    color: #6AFA84;
+    margin-bottom: 30px;
+}
+
+.photo-about p {
+    color: #888888;
+    padding: 0 10%;
+    text-align: left;
+}
+
+.photo-contact {
+    background-color: #764856;
+}
+
+.photo-contact h2 {
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.photo-contact p {
+    color: #FFFFFF;
+    padding: 0 10%;
+    text-align: left;
+}
+
+.photo-contact-form {
+    padding: 0 10%;
+}
+
+.photo-contact-form input:nth-child(1),
+.photo-contact-form input:nth-child(3),
+.photo-contact-form input:nth-child(2),
+.photo-contact-form input:nth-child(4) {
+    margin: 0 0 20px;
+}
+
+
+@media (min-width: 585px) {
+    .photo-hero {
+        min-height: 600px;
+    }
+}
+
+@media (min-width: 720px) {
+    .photo-hero {
+        min-height: 500px;
+    }
+
+    .image-box {
+        width: calc(33.3333% - 40px);
+    }
+
+    .photo-about p,
+    .photo-contact p,
+    .photo-contact-form {
+        padding: 0 20%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .photo-hero {
+        min-height: 700px;
+    }
+
+    .photo-hero-text {
+        width: 70%;
+        display: block;
+    }
+
+    .photo-contact-form input {
+        width: 48%;
+        display: inline-block;
+        float: left;
+    }
+
+    .photo-contact-form input:nth-child(1),
+    .photo-contact-form input:nth-child(3) {
+        margin: 0 2% 20px 0;
+    }
+
+    .photo-contact-form input:nth-child(2),
+    .photo-contact-form input:nth-child(4) {
+        margin: 0 0 20px 2%;
+    }
+}
