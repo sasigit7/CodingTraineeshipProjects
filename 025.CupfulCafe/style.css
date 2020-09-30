@@ -1,0 +1,88 @@
+body {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+h1 {
+    width: 100%;
+    font-weight: 300;
+    text-align: center;
+    font-size: 40px;
+    color: #D6B47E;
+}
+
+h2 {
+    display: inline-block;
+    text-align: center;
+    background-color: #D6B47E;
+    padding: 3px 10px;
+    margin: 5px;
+    font-size: 1.75rem;
+    color: #FFF;
+}
+
+.menu {
+    border: 2px solid;
+    text-align: center;
+    width: 200px;
+}
+
+h3 {
+    display: inline-block;
+    font-weight: 800;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px 25px;
+    color: #D6B47E;
+}
+
+.container {
+    min-width: 775px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero {
+    background-image: url("https://content.codecademy.com/projects/make-a-website/lesson-2/cafe.jpg");
+    background-size: cover;
+    min-width: 964px;
+    min-height: 422px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.supporting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 0 0 0;
+}
+
+.supporting-container div {
+    background-size: cover;
+    min-width: 450px;
+    min-height: 345px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.upcoming {
+    background-image: url("https://content.codecademy.com/projects/make-a-website/lesson-2/events.jpg");
+}
+
+.roast {
+    background-image: url("https://content.codecademy.com/projects/make-a-website/lesson-2/roast.jpg");
+}
+
+#footer {
+    text-align: center;
+    color: #D6B47E;
+    font-weight: 300;
+    width: 100%;
+    font-size: 1.25rem;
+}
