@@ -1,3 +1,14 @@
-# Screenshot of Codecademy Web Development Path Completion
+# My Coding Traineeship Programme Journey (April 2020 - )
 
-![WebDevPath](https://i.imgur.com/clS6N6q.png)
+## Step1: Front-End Development Certifications
+<img src="https://user-images.githubusercontent.com/24832458/96701547-a3d41f80-1388-11eb-83f4-77c398a6bf66.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96702649-dfbbb480-1389-11eb-86f2-466165c081ba.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96702837-0f6abc80-138a-11eb-9c04-3c64514dcf1a.png" width="30%"></img> 
+
+## Step2: Full-Stack Development Certifications
+<img src="https://user-images.githubusercontent.com/24832458/96708349-092c0e80-1391-11eb-87c5-452c33742ff1.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96708723-8ce5fb00-1391-11eb-967c-314fd51b52cf.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96707590-fe24ae80-138f-11eb-9ffb-e82a98f67823.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96707645-109ee800-1390-11eb-8d60-640aaf5b0084.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96708358-0c26ff00-1391-11eb-8e09-262b398dadfa.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96707710-22808b00-1390-11eb-9808-1a7628604457.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96707677-1a285000-1390-11eb-8147-a5036507a49d.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96707730-27ddd580-1390-11eb-8385-e1033ea1698b.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96707752-30cea700-1390-11eb-829b-7e626f263b66.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96708369-11844980-1391-11eb-9966-0c32197f94e9.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96708411-1c3ede80-1391-11eb-86b1-7d83fb7a4c71.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96708418-1f39cf00-1391-11eb-8dcc-5829239144c6.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96708430-23fe8300-1391-11eb-9816-27761d6623f1.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96708447-28c33700-1391-11eb-8b0b-4caeec307af2.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/24832458/96709522-b6535680-1392-11eb-9c1d-2ac2131ac486.png" width="30%"></img> 
+
+## Codacademy Assessment Exam Based On Step2  
+### Attempt1 & Attemp2 
+<img src="https://user-images.githubusercontent.com/24832458/96710619-35955a00-1394-11eb-985a-8db7e4873711.jpeg" width="45%"></img> <img src="https://user-images.githubusercontent.com/24832458/96710821-8311c700-1394-11eb-8fa7-ba44b820203d.jpeg" width="45%"></img> 
+
+## Microsoft Exam 98-383
+<img src="https://user-images.githubusercontent.com/24832458/96712016-5b236300-1396-11eb-8323-a0e9d6953d80.png" width="90%"></img> 
