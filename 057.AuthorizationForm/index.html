@@ -1,0 +1,89 @@
+<!-- INSERT A BOILER PLATE CODE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>Authorization Form</title>
+    <!-- SETUP A DEVELOPMENT ENVIRONMENT -->
+    <!-- REACT LIBRARY -->
+    <script crossorigin
+            src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin
+            src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <link rel="stylesheet"
+          href="styles.css"
+          type="text/css">
+</head>
+
+<body>
+    <h1 id="header">Authorization Form Using React</h1>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">REACT HAS NOT RENDERED YET!</div>
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+        class Contact extends React.Component {
+        constructor(props) {
+        super(props);
+        this.state = {
+        password: 'I Love React',
+        authorized: false
+    };
+    this.authorize = this.authorize.bind(this);
+    }
+    authorize(e) {
+    const password = e.target.querySelector('input[type="password"]').value;
+    const auth = password == this.state.password;
+    this.setState({ authorized: auth });
+    }
+    render() {
+    const login = (
+    <form action="#"
+          onSubmit={this.authorize}>
+        <input type="password"
+               placeholder="Password" />
+        <input type="submit" />
+    </form>
+    );
+    const contactInfo = (
+    <ul>
+        <li>
+           <a href="https://twitter.com/ShashiWebDev" target="_blank">Twitter</a>
+        </li>
+        <li>
+           <a href="https://www.linkedin.com/in/shashi-m-0a3b8244/"
+              target="_blank">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://github.com/sasigit7"
+             target="_blank">Github</a>
+        </li>
+    </ul>
+    );
+    return (
+    <div id="authorization">
+        <h1>{ this.state.authorized ? 'Connect Me On' : 'Enter, I Love React' }
+        </h1>
+        { this.state.authorized ? contactInfo : login }
+    </div>
+    );
+}
+}
+    // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS (REACT WHAT, REACT WHERE)
+       ReactDOM.render(
+         // REACT WHAT - JSX
+         <Contact />,
+         // REACT WHERE - DIV WITH ID OF "APP"
+         document.getElementById("app")
+       );
+    </script>
+</body>
+
+</html>
