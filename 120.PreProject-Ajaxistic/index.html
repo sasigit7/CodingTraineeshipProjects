@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Shashi" />
+    <meta
+      name="description"
+      content="Rendering Remote APIs In A Webpage Using HTML, jQuery Ajax Method & PHP"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAXistic</title>
+    <link href="libs/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body onload="preLoader()">
+    <h1>
+      <span class="animate">AJAXistic</span>
+      Rendering Remote API's In A Webpage Using HTML, jQuery Ajax Method & PHP
+    </h1>
+    <div id="preloader"></div>
+
+    <div id="apiTable" class="animate-bottom">
+      <table>
+        <thead>
+          <tr id="head">
+            <th>API Name</th>
+            <th>API Description</th>
+            <th>Click Submit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="apiName">Wikipedia</td>
+            <td class="apiDescription">
+              Returns the Wikipedia entries found for the search term.
+            </td>
+            <td class="wrap">
+              <button class="button" id="wikiBtn">Submit</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="apiName">Weather</td>
+            <td class="apiDescription">
+              Returns a list of Weather stations with the most recent weather
+              observations.
+            </td>
+            <td class="wrap">
+              <button class="button" id="weatherBtn">Submit</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="apiName">Country Information</td>
+            <td class="apiDescription">
+              Returns Country Info like Capital city, Population, Area in Square
+              KM.
+            </td>
+            <td class="wrap">
+              <button class="button" id="countryBtn">Submit</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="4" id="results"></td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="3" id="foot">
+              ITCS Pre-Project Task: Coded by <a href="#">Shashi</a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="libs/js/jquery-2.2.3.min.js"></script>
+    <script src="libs/js/script.js"></script>
+  </body>
+</html>
