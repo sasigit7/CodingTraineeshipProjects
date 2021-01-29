@@ -1,4 +1,4 @@
-# My Coding Traineeship Journey (April 2020 - )
+# My Coding Traineeship Journey (April 2020 - February 2021)
 <p>Programme Outline: :arrow_right: This Coding Traineeship Programme from <a href="https://itcareerswitch.co.uk/coding-traineeship/" >IT Career Switch</a> should complete in four steps. It consists of; Front-end and Back-end coding, practical projects, gaining official certifications & building my own personal portfolio.</p>
 
 
@@ -8,4 +8,4 @@
 
 ## <details><summary> Step3: Microsoft Official Certifications In : HTML & CSS: 98-383(Achieved:92%) & JavaScript: 98-382(Achieved: 91%):writing_hand:</summary><img src="https://user-images.githubusercontent.com/24832458/99462830-66819400-292c-11eb-990e-7c2f78948285.png" width="50%"></img><img src="https://user-images.githubusercontent.com/24832458/99462950-a9dc0280-292c-11eb-916c-0246bb82a5a1.png" width="50%"></img></details>
 
-## <details><summary> Step4: Projects & Personal Portfolio</summary>*<p>ITC Tutor assigned me one pre-project task to understand few web development techniques such as AJAX calls in Javascript before I was assigned two independent projects to complete whilst providing guidance and support throughout to ensure they are of a high industry standard.</p>*<ul><li><a href="https://github.com/sasigit7/Ajaxistic">PreProject-Ajaxistic</a></li><li><a href="https://github.com/sasigit7/Gazetteer">Project1-The Gazetteer</a></li><li><a href="#">Project2-Coming Soon</a></li><li><a href="https://shashwebdev.com/">Personal Portfolio<a/></li></ul></details>
+## <details><summary> Step4: Projects & Personal Portfolio</summary>*<p>ITC Tutor assigned me one pre-project task to understand few web development techniques such as AJAX calls in Javascript before I was assigned two independent projects to complete whilst providing guidance and support throughout to ensure they are of a high industry standard.</p>*<ul><li><a href="https://github.com/sasigit7/Ajaxistic">PreProject-Ajaxistic</a></li><li><a href="https://github.com/sasigit7/TheGazetteer">Project1-The Gazetteer</a></li><li><a href="#">Project2-Coming Soon</a></li><li><a href="https://shashwebdev.com/">Personal Portfolio<a/></li></ul></details>
