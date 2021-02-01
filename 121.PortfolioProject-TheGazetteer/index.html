@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Country Profiler With a Map" />
+  <meta name="keywords" content="HTML, CSS, Bootstrap, JavaScript, Leaflet, AJAX, JSON, PHP" />
+  <meta name="author" content="Shashi" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Gazetteer</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <!-- Select2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="css/leaflet.css" />
+  <link rel="stylesheet" href="css/leaflet.extra-markers.min.css" />
+  <!-- Favicon  -->
+  <link rel="shortcut icon" href="myIcon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <!-- <link rel="manifest" href="/site.webmanifest.json" /> -->
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/weather_card.css" />
+</head>
+
+<body>
+  <!-- Single Page Map Layout With a Pop up Modal Overlay -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12" id="map_parent">
+        <div id="map_sibling_top">
+          <select id="country_list" onchange="zoomToCountry(this.value)">
+            <option value="">Select Country</option>
+          </select>
+        </div>
+        <div id="country_info">
+          <div class="card m-10">
+            <div class="card-header">
+              <i class="fas fa-arrow-left" style="margin-right: 16px" onclick="hide_popup()"></i>
+              <h2 style="display: inline" id="country_name"></h2>
+            </div>
+            <div class="card-body pb-10" style="overflow-y: auto">
+              <table class="table table-bordered">
+                <tr>
+                  <th>Capital</th>
+                  <td id="country_capital"></td>
+                </tr>
+                <tr>
+                  <th>Population</th>
+                  <td id="country_population"></td>
+                </tr>
+                <tr>
+                  <th>Flag</th>
+                  <td>
+                    <img src="" style="height: 50px" id="country_flag" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Currency</th>
+                  <td id="country_currency"></td>
+                </tr>
+                <tr>
+                  <th>Wikipedia Page</th>
+                  <td>
+                    <a href="" target="_blank" class="text-dark" id="country_wikipedia">Click Here</a>
+                  </td>
+                </tr>
+              </table>
+              <div class="text-center">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target=""
+                    onclick="get_covid_data();">
+                    <i class="fal fa-shield-virus"></i> Covid
+                  </button>
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target=""
+                    onclick="get_weather_data();">
+                    <i class="fas fa-cloud-sun"></i> Weather
+                  </button>
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target=""
+                    onclick="get_news_data();">
+                    <i class="far fa-newspaper"></i> News
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary pull_country_info_popup" onclick="show_popup();">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <div id="map"></div>
+      </div>
+      <!-- Corona Data -->
+      <div class="modal fade" id="coronoModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-warning">Covid Details</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body" id="covid_data">
+              <table class="table table-bordered table-striped table-hover">
+                <tr>
+                  <th>Total cases</th>
+                  <td id="covid_total_cases"></td>
+                </tr>
+                <tr>
+                  <th>Active</th>
+                  <td id="covid_active"></td>
+                </tr>
+                <tr>
+                  <th>Recovered</th>
+                  <td id="covid_recovered"></td>
+                </tr>
+                <tr>
+                  <th>Deaths</th>
+                  <td id="covid_deaths"></td>
+                </tr>
+                <tr>
+                  <th>Today cases</th>
+                  <td id="covid_todayCases"></td>
+                </tr>
+                <tr>
+                  <th>Today Recovered</th>
+                  <td id="covid_todayRecovered"></td>
+                </tr>
+                <tr>
+                  <th>Today Deaths</th>
+                  <td id="covid_todayDeaths"></td>
+                </tr>
+                <tr>
+                  <th>Active per Million</th>
+                  <td id="covid_activePerOneMillion"></td>
+                </tr>
+                <tr>
+                  <th>Recovered per Million</th>
+                  <td id="covid_recoveredPerOneMillion"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Weather Data -->
+      <div class="modal fade" id="weatherModal">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-warning">Weather Details</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body" id="weather_data">
+              <div class="weather_card">
+                <h2 id="weather_city_name"></h2>
+                <h3 id="weather_description"></h3>
+                <div class="image_parent">
+                  <img src="" width="100px" height="100px" />
+                  <h1></h1>
+                </div>
+                <table>
+                  <tr id="first_row"></tr>
+                  <tr id="second_row"></tr>
+                  <tr id="third_row"></tr>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- News Data -->
+      <div class="modal fade" id="newsModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-warning">Latest News</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body" id="news_data"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/leaflet.js"></script>
+  <script src="js/spin.min.js"></script>
+  <script src="js/leaflet.spin.min.js"></script>
+  <script src="js/jquery-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/leaflet.extra-markers.min.js"></script>
+
+  <script src="js/custom_script.js"></script>
+</body>
+
+</html>

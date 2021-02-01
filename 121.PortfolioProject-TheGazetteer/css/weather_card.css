@@ -1,0 +1,90 @@
+.weather_card {
+    margin: 0 auto;
+    padding: 5px 30px;
+    width: 350px;
+    border-radius: 3px;
+    background-color: #f7786b;
+    border: 1px solid lightgrey;
+    color: white;
+}
+
+.weather_card h1 {
+    font-weight: 300;
+    font-size: 5.59375em;
+    line-height: .2em;
+}
+
+.weather_card h2 {
+    font-weight: 300;
+    font-size: 2.25em;
+    margin: 0.83em 0;
+}
+
+.weather_card h3 {
+    margin-right: 33px;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.weather_card span {
+    margin-left: 24px;
+    font-weight: 300;
+}
+
+.weather_card span span {
+    margin-left: 0;
+}
+
+.weather_card .dot {
+    font-size: .9em;
+}
+
+.weather_card table {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2.83em;
+}
+
+.weather_card tr:nth-child(1) td:nth-child(1),
+.weather_card tr:nth-child(1) td:nth-child(2),
+.weather_card tr:nth-child(1) td:nth-child(3),
+.weather_card tr:nth-child(1) td:nth-child(4),
+.weather_card tr:nth-child(1) td:nth-child(5) {
+    padding-bottom: 15px;
+}
+
+.weather_card tr:nth-child(2) td:nth-child(1),
+.weather_card tr:nth-child(2) td:nth-child(2),
+.weather_card tr:nth-child(2) td:nth-child(3),
+.weather_card tr:nth-child(2) td:nth-child(4),
+.weather_card tr:nth-child(2) td:nth-child(5) {
+    padding-bottom: 7px;
+}
+
+.weather_card tr:nth-child(3) td:nth-child(1),
+.weather_card tr:nth-child(3) td:nth-child(2),
+.weather_card tr:nth-child(3) td:nth-child(3),
+.weather_card tr:nth-child(3) td:nth-child(4),
+.weather_card tr:nth-child(3) td:nth-child(5) {
+    padding-bottom: 7px;
+}
+
+.weather_card tr:nth-child(2),
+.weather_card tr:nth-child(3) {
+    font-size: .9em;
+}
+
+.weather_card .image_parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2em 0;
+}
+.weather_card .image_parent img{
+    width:100px;
+    height:auto;
+    background-color: white;
+    border-radius: 12px;
+}

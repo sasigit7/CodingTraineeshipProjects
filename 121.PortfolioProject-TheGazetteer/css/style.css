@@ -1,0 +1,59 @@
+html,
+body {
+  height: 100%;
+}
+
+.modal-body {
+  height: 70vh;
+  overflow-y: auto;
+}
+
+/* Map */
+.container-fluid,
+.row,
+#map,
+#map_parent {
+  height: 100%;
+}
+#map_parent {
+  position: relative;
+  padding: 0;
+}
+#map_sibling_top {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: 200px;
+  z-index: 401;
+}
+#country_list {
+  width: 100%;
+}
+
+#country_info {
+  position: absolute;
+  left: -300px;
+  top: 10px;
+  z-index: 1000;
+  padding: 0;
+  min-width: 300px;
+  width: auto;
+  height: auto;
+}
+.pull_country_info_popup {
+  position: absolute;
+  top: 29px;
+  z-index: 1002;
+  left: -40px;
+  border-radius: 0 5px 5px 0;
+}
+.fas.fa-arrow-left {
+  cursor: pointer;
+}
+#news_data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
