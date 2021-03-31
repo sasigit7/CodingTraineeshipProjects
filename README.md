@@ -1,4 +1,4 @@
-# My Coding Traineeship Journey (April 2020 - February 2021)
+# My Coding Traineeship Journey (April 2020 - April 2021)
 <p>Programme Outline: :arrow_right: This Coding Traineeship Programme from <a href="https://itcareerswitch.co.uk/coding-traineeship/" >IT Career Switch</a> should complete in four steps. It consists of; Front-end and Back-end coding, practical projects, gaining official certifications & building my own personal portfolio.</p>
 
 
