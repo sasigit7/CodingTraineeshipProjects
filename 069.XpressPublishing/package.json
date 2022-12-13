@@ -15,7 +15,7 @@
     "cors": "^2.8.5",
     "error-handler": "^1.0.0",
     "errorhandler": "^1.5.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mocha": "^3.5.0",
     "morgan": "^1.10.0",
     "random-flat-colors": "^1.0.4",
